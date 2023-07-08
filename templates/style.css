@@ -1,12 +1,30 @@
-h1{
-    color: rgb(12, 12, 12);
-    transform-box: black;
+
+label{
+    width: 80px;
+    display: inline-block;
+    margin: 0.2cm;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 input{
-    border-block-color: rgb(14, 13, 13);
+    padding: 4px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #f9f9f9;
+    
 }
 
-label{
+input#submit{
+    margin-top: 7px;
+    color: wheat;
+    font-weight: bold;
+    padding: 4px;
+    background-color:rgb(157, 7, 7);
+}
 
+input#submit:hover{
+background-color: green;
+color: #f9f9f9;
 }
