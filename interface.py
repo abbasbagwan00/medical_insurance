@@ -5,7 +5,7 @@ import traceback
 
 app = Flask(__name__)
 
-@app.route('/medical_insurance')
+@app.route('/')
 def home1():
 
 
@@ -54,7 +54,7 @@ def predict_charges():
        
     except:
         print(traceback.print_exc())
-        return redirect(url_for('Medical Insurance'))
+        return redirect(url_for('/'))
 
 if __name__ == "__main__":
     app.run(host = '0.0.0.0', port = 8080)
