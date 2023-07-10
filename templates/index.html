@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html>
     
 <head>
     <meta charset="UTF-8">
@@ -20,12 +20,10 @@
 </style>
        
 
-<Body>
+<body>
     <div class="form">
         <img src="/Health_care.png" alt="Medical Img" style="width:250px;height:250px;">
-
-
-        <h1 style=font-family: arial;">Medical Insurance Charges Prediction</h1>
+        <h1>Medical Insurance Charges Prediction</h1>
         
 
         <form method="POST" action="/predict_charges">
@@ -34,6 +32,7 @@
             <input type="text" name = "age">
             </select>
 
+            <br>
             <br>
     
         
@@ -44,6 +43,7 @@
             </select>
 
             <br>
+            <br>
         
 
             <label>BMI</label>
@@ -51,11 +51,13 @@
             </select>
 
             <br>
+            <br>
 
             <label>Children</label>
             <input type = "text" name = "children">
             </select>
 
+            <br>
             <br>
 
             <label>Smoker</label>
@@ -64,6 +66,7 @@
             <label>No</label>
             <input type="radio" name="smoker" value="no">
 
+            <br>
             <br>
 
             <label>Region</label>
@@ -74,6 +77,7 @@
                 <option value = "southwest">Southwest</option>
             </select>
 
+            <br>
             <br>
 
             <input type="submit" value="SUBMIT" id="submit">
