@@ -9,7 +9,6 @@ app = Flask(__name__)
 def home1():
     
 
-
     return render_template('index.html')
 
 @app.route('/predict_charges', methods = ['GET','POST'])

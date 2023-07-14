@@ -1,96 +1,125 @@
 <!DOCTYPE html>
-<html>
-    
+<html lang = "en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Insurance Charges Prediction </title>
-    <link rel="stylesheet" href="style.css" type="text/css"
-
+    <title> Medical Insurance Charges Prediction </title> 
+     
 </head>
-
 <style>
     body{
-        background-image: url("/medical.jpeg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
+display: flex;
+height: 100vh;
+justify-content: center;
+align-items: center; 
+background: linear-gradient(135deg,rgb(0, 252, 252),rgb(241, 124, 214),rgb(117, 83, 238));
+}
+
+
+    .box{
+        border: 3px solid black;
+padding: 20px;
+margin: 20px;
+width: 400px;
+font-family: Arial,sans-serif;
     }
+
+
+    input[type ="number"],select{
+   padding: 10px;
+   margin-bottom: 10px;
+   border-radius: 10px;
+   border: none;
+   background-color: #faf8f8;
+    
+}
+
+    input[type="submit"] {
+            background-color: #d41010;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+    input[type="submit"]:hover {
+            background-color: #45a049;}
 </style>
        
 
 <body>
-    <div class="form">
-        <img src="/Health_care.png" alt="Medical Img" style="width:250px;height:250px;">
-        <h1>Medical Insurance Charges Prediction</h1>
-        
+    <div class="box">
 
-        <form method="POST" action="/predict_charges">
-
-            <label>Age</label>
-            <input type="text" name = "age">
-            </select>
-
-            <br>
-            <br>
+    <h1 style="font-size:40px; text-align: center;">Medical Insurance Charges Prediction</h1>
     
+
+    <form method="POST" action="/predict_charges">
+        <marquee style="border: 3px inset  rgb(255, 0, 234); border-radius: 15px; padding: 3px; text-align: center; width: 100%; margin-bottom: 10px;"><i>👇 Check The Best Charges For Your Insurance 🤗 </i></marquee>
+
+        <label>Age</label>
+        <input type="text" name = "age" placeholder="Enter Age">
+        </select>
+
+        <br>
+        <br>
+    
+        <label>Gender</label>
+        <select name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label>BMI</label>
+        <input type="text" name="bmi" placeholder="Enter BMI Value">
+        </select>
+
+        <br>
+        <br>
+
+        <label>Children</label>
+        <input type = "text" name = "children" placeholder="Enter no of Childrens">
+        </select>
+
+        <br>
+        <br>
+
+        <label>Are You Smoker ?</label><br>
+        <br>
+        <label>Yes</label>
+        <input type="radio" name="smoker" value="yes">
+        <label>No</label>
+        <input type="radio" name="smoker" value="no">
+
+        <br>
+        <br>
+
+        <label>Select Region</label>
+        <select name="region">
+            <option value = "northeast">Northeast</option>
+            <option value = "southeast">Southeast</option>
+            <option value = "northwest">Northwest</option>
+            <option value = "southwest">Southwest</option>
+        </select>
+
+        <br>
+        <br>
+
+        <input type="submit" value="SUBMIT">
         
-            <label>Gender</label>
-            <select name="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-
-            <br>
-            <br>
         
 
-            <label>BMI</label>
-            <input type="text" name="bmi">
-            </select>
+        <br>
 
-            <br>
-            <br>
-
-            <label>Children</label>
-            <input type = "text" name = "children">
-            </select>
-
-            <br>
-            <br>
-
-            <label>Smoker</label>
-            <label>Yes</label>
-            <input type="radio" name="smoker" value="yes">
-            <label>No</label>
-            <input type="radio" name="smoker" value="no">
-
-            <br>
-            <br>
-
-            <label>Region</label>
-            <select name="region">
-                <option value = "northeast">Northeast</option>
-                <option value = "southeast">Southeast</option>
-                <option value = "northwest">Northwest</option>
-                <option value = "southwest">Southwest</option>
-            </select>
-
-            <br>
-            <br>
-
-            <input type="submit" value="SUBMIT" id="submit">
-            
-            
-            
-
-            <br>
-
-            <h2><strong>Your insurance premium charges will be <b>{{ prediction }} /- Rs.<b> Only</strong></h2>
+        <h3 style="border: 4px outset rgb(30, 221, 238); font-size: 16px; text-align: center; width: 100%; border-radius: 15px;color: #000000; padding: 3px;"><strong>Your insurance premium charges will be <b>{{ prediction }} /- Rs.<b> Only</strong></h3>
 
 
-        </form>
-    </div>
+    </form>
+    
 </body>
 </html>
